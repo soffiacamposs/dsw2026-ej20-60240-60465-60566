@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 450px;
+
+    padding: 30px;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.login-form input {
+    width: 100%;
+
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.login-form button {
+    width: 100%;
+
+    padding: 12px;
+
+    cursor: pointer;
+}
