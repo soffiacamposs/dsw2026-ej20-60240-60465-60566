@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= LOGIN (mobile first) ================= */
+
+.login {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  background: #f4f4f4;
+}
+
+.login label {
+  font-size: 18px;
+}
+
+.login input {
+  padding: 12px;
+  font-size: 18px;
+}
+
+.login button {
+  padding: 14px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .pagina-login {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+
+  .login {
+    min-height: auto;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+}
+
+/* ================= PANEL (mobile first) ================= */
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "sidebar"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background: #e3e3e3;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #cfcfcf;
+  padding: 10px;
+  display: none;
+}
+
+.main {
+  grid-area: main;
+  background: #f4f4f4;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #ddd;
+  padding: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header button {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.sidebar a {
+  display: block;
+  padding: 8px 0;
+}
+
+
+@media (min-width: 768px) {
+  .page {
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+
+  .sidebar {
+    display: block !important;
+  }
+
+  .header button {
+    display: none;
+  }
+}

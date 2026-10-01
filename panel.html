@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="pagina-panel">
+
+  <div class="page">
+    <header class="header">
+      <button id="botonMenu" type="button">☰</button>
+      <h1>Panel</h1>
+    </header>
+
+    <nav class="sidebar" id="menu">
+      <a href="panel.html">Panel</a>
+      <a href="login.html">Cerrar sesión</a>
+    </nav>
+
+    <main class="main">
+      <h2>Bienvenido</h2>
+      <p>Contenido principal del panel.</p>
+    </main>
+
+    <footer class="footer">
+      <p>Pie de página</p>
+    </footer>
+  </div>
+
+  <script>
+    const boton = document.querySelector("#botonMenu");
+    const menu = document.querySelector("#menu");
+
+    boton.addEventListener("click", () => {
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "block";
+      }
+    });
+  </script>
+
+</body>
+
+</html>
